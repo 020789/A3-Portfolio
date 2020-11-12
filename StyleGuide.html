@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Style Guide</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="About">
+  	<div class="box">
+  	<div class="About_Box">
+  		<h3>Style Guide</h3>
+  		<p> Things will be layed out in content boxes </p>
+      <button type="button" name="Example" class="ButtonNav">Example Button</button>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 8</div>
+      <img src="Storyboard1Img/Sb1.png" style="width:100%">
+      <div class="text">Example of Carousel 1</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 8</div>
+      <img src="Storyboard1Img/Sb2.png" style="width:100%">
+      <div class="text">Example of Carousel 2</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="Storyboard1Img/Sb3.png" style="width:100%">
+      <div class="text">Example of Carousel 3</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 8</div>
+      <img src="Storyboard1Img/Sb4.png" style="width:100%">
+      <div class="text">Example of Carousel 4</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 8</div>
+      <img src="Storyboard1Img/Sb5.png" style="width:100%">
+      <div class="text">Example of Carousel 5</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 8</div>
+      <img src="Storyboard1Img/Sb6.png" style="width:100%">
+      <div class="text">Example of Carousel 6</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 8</div>
+      <img src="Storyboard1Img/Sb7.png" style="width:100%">
+      <div class="text">Example of Carousel 7</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 8</div>
+      <img src="Storyboard1Img/Sb8.png" style="width:100%">
+      <div class="text">Example of Carousel 8</div>
+    </div>
+
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+
+  <div class="About">
+    <div class="box">
+    <div class="About_Box">
+      <h3>Example of Image</h3>
+      <img src="SpottingLog1Img/SL1.png" alt="Spotting log">
+  </div>
+  </div>
+  </div>
+
+  <div class="wrapper">
+    <h1>Example of Grids and clickable images</h1>
+    <div class="box">
+      <div class="Past_work">
+        <div class="Past_work_img">
+          <img src="DustBunny.png" alt="Team_image">
+        </div>
+        <h3>Dust Bunnies</h3>
+        <p class="role">My role: Animator, 3D Modeler</p>
+        <p>This is an animation project I worked on with four other team members. The goal is to create a short animated film</p>
+  			<a href="Dust.html"><button type="button" name="Learn More Button" class="ButtonNav">Learn More</button></a>
+      </div>
+      <div class="Past_work">
+        <div class="Past_work_img">
+          <img src="bread.png" alt="Team_image">
+        </div>
+        <h3>Freshness Guaranteed French Bread</h3>
+        <p class="role">My role: Director, Cinematographer, Music Composer, Sound Designer </p>
+        <p>This is a film/sound design project where me and my partner created a film that is driven by sound.</p>
+  			<a href="Bread.html"><button type="button" name="Learn More Button" class="ButtonNav">Learn More</button></a>
+  		</div>
+    </div>
+  </div>
+
+
+  <div class="Composing">
+    <div class="box">
+    <div class="Composing_Box">
+      <h3>Fonts Used</h3>
+        <div class="TitleFont">
+          <h1>Title: Font Pacifico 62px</h1>
+        </div>
+        <div class="wrapper">
+          <h1>SubTitle: Font Josefin Sans 52px</h1>
+        </div>
+        <div class="Past_work">
+          <p>Paragraph: Font Josefin Sans 12px</p>
+        </div>
+
+  </div>
+  </div>
+  </div>
+
+
+  <div class="Post">
+    <div class="box">
+    <div class="Post_Box">
+      <h3>Color Palettes</h3>
+      <p class = "palette-swatch" style = "background-color: #0E1F33; top">#0E1F33 will be used as background color </p>
+
+
+
+      <p class = "palette-swatch" style = "background-color: #CEA434;">   #CEA434 this color will be used to highlight elements of importance.</p>
+
+
+
+
+  </div>
+  </div>
+  </div>
+</body>

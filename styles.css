@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #0E1F33;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.TitleFont {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  font-size: 62px;
+  font-family: 'Pacifico', cursive;
+  line-height: 2em;
+}
+
+.palette-swatch {
+  margin-left: 16em;
+  margin-bottom: 1em;
+  padding: 12px;
+  width: 200px;
+}
+
+
+.TopBanner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.TopBanner .FreshBread {
+  margin-top: 1em;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 62px;
+  font-family: 'Pacifico', cursive;
+}
+
+.About {
+  margin-top: 10%;
+}
+
+.About .About_Box {
+  background: #193153;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 900px;
+  padding: 100px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.About .About_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+
+
+.box .About_Box img{
+  width: 800px;
+  height: 1200px;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-left: -3em;
+}
+
+
+
+
+
+
+.ButtonNav {
+  margin-top: 2.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  transition-property: color, border;
+  transition-duration: 0.5s;
+}
+
+.ButtonNav:hover ,ButtonNav:focus {
+  color: #CEA434;
+  border: 5px solid #CEA434;
+}
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  color: #CEA434;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 52px;
+  margin-bottom: 60px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.box .Past_work{
+  background: #193153;
+  margin: 50px;
+  margin-bottom: 50px;
+  width: 600px;
+  padding: 100px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+}
+
+.box .Past_work h3{
+  color: #CEA434;
+  font-size: 26px;
+  margin-top: 15em;
+  line-height: 30px;
+}
+
+.box .Past_work p.role{
+  color: #CEA434;
+  margin: 12px 0;
+  margin-bottom: 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.box .Past_work p {
+  color: white;
+}
+
+.box .Past_work .Past_work_img{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+}
+
+.box .Past_work .Past_work_img img{
+  width: 600px;
+  height: 400px;
+
+}
+
+.Past_work_img {
+  overflow: hidden;
+}
+
+.Past_work_img img {
+  transform-origin: 50% 50%;
+  transition: transform .25s, visibility .25s ease-in;
+}
+
+.Past_work_img:hover img {
+  transform: scale(1.1);
+}
+.References {
+  margin-top: 10%;
+}
+.References .References_Box {
+  margin-bottom: 10em;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+
+}
+
+.References .References_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+.References .ButtonNav {
+  margin-right: 1em;
+}
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  margin-top: -10px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #CEA434;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -5em;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: -0.5em;
+  left: -3.5em;
+
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 10em;
+}
+
+.active, .dot:hover {
+  background-color: #CEA434;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  transition-property: color, border;
+  transition-duration: 0.5s;
+}
+
+#myBtn:hover {
+  color: #CEA434;
+  border: 5px solid #CEA434;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Composing {
+  margin-top: 10%;
+}
+
+.Composing .Composing_Box {
+  background: #193153;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 900px;
+  padding: 100px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.Composing .Composing_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+.box .Composing_Box img{
+  width: 830px;
+  height: 519px;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-left: -4em;
+}
+
+
+
+.SoundDesign {
+  margin-top: 10%;
+}
+
+.SoundDesign .SoundDesign_Box {
+  background: #193153;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 900px;
+  padding: 100px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.SoundDesign .SoundDesign_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+.box .SoundDesign_Box img{
+  width: 830px;
+  height: 482px;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-left: -4em;
+}
+
+
+.Shooting {
+  margin-top: 10%;
+}
+
+.Shooting .Shooting_Box {
+  background: #193153;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 900px;
+  padding: 100px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.Shooting .Shooting_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+.box .Shooting_Box img{
+  width: 830px;
+  height: 482px;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-left: -4em;
+}
+
+
+.Post {
+  margin-top: 10%;
+}
+
+.Post .Post_Box {
+  background: #193153;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 900px;
+  padding: 100px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.Post .Post_Box h3 {
+  color: #CEA434;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 1em;
+}
+
+.box .Post_Box img{
+  width: 830px;
+  height: 482px;
+  margin-bottom: 10em;
+  margin-top: 5em;
+  margin-left: -4em;
+}

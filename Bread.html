@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Process Analysis 1</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">^ Top</button>
+
+
+  <div class="TopBanner">
+
+  		<video width="1000" controls class="FreshBread">
+          <source src="Fresh.mp4" type="video/mp4">
+      </video>
+  </div>
+
+  <a href="index.html"><button type="button" name="Go Home" class="ButtonNav">Go Home</button></a>
+
+  <div class="About">
+  	<div class="box">
+  	<div class="About_Box">
+  		<h3>1. Film Drive by Sound</h3>
+  		<p>
+        As a film crew of two with two actors we were task to
+        create a film that were driven by sound. My role on this
+        project was direct the film and the cinematography, while
+        coming up with a beat that will drive the film as well as
+        some sound design. In this project we aimed to explore
+        how we can use sound to drive the cinematograph, such as
+        cutting on sound cues rather than cutting on action. This
+        required us to make two cohesive beats out of things
+        found in a restaurant, such as plates, glass and more.
+        During the project we had to use various of filming
+        equipment such as camera, lighting kits, tripods, dolly,
+        sliders and glidecam. We also used sound recording
+        equipment such as, h4n and boom mic. During the post
+        processing phase, we used software such as, garage band,
+        adobe premiere and audacity
+      </p>
+  </div>
+  </div>
+  </div>
+
+  <div class="About">
+  	<div class="box">
+  	<div class="About_Box">
+  		<h3>2. StoryBoard</h3>
+  		<p>
+        I first started to sketch out a set of storyboards showing
+        different shots, directions and audio that will be used for
+        the film. This step made the day of filming and the
+        editing process a lot of easier since it laid out the
+        structure of the film, therefore, marking down all the
+        ideas and shots making it so we would not need to
+        improvise on the day of filming. Furthermore, it allowed
+        us to refer to this if we are ever lost. This was one of the
+        weaknesses to this project where my limited art skill
+        hindered the production of the film. Since, I came up with
+        the idea for the film I had to communicate my idea to my
+        teammate and the actors but my sketches were too
+        rudimentary to the point of confusing the people of set.
+      </p>
+  </div>
+  </div>
+  </div>
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8</div>
+    <img src="Storyboard1Img/Sb1.png" style="width:100%">
+    <div class="text">StoryBoard Page 1</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="Storyboard1Img/Sb2.png" style="width:100%">
+    <div class="text">StoryBoard Page 2</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src="Storyboard1Img/Sb3.png" style="width:100%">
+    <div class="text">StoryBoard Page 3</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 8</div>
+    <img src="Storyboard1Img/Sb4.png" style="width:100%">
+    <div class="text">StoryBoard Page 4</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="Storyboard1Img/Sb5.png" style="width:100%">
+    <div class="text">StoryBoard Page 5</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="Storyboard1Img/Sb6.png" style="width:100%">
+    <div class="text">StoryBoard Page 6</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 8</div>
+    <img src="Storyboard1Img/Sb7.png" style="width:100%">
+    <div class="text">StoryBoard Page 7</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <img src="Storyboard1Img/Sb8.png" style="width:100%">
+    <div class="text">StoryBoard Page 8</div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div class="About">
+  <div class="box">
+  <div class="About_Box">
+    <h3>3. Spotting Log</h3>
+    <p>
+      Since the natural of the project was using sound to drive
+      a film it was important for us to create a spotting log.
+      Here I wrote down when the sound will be played during
+      the video and how each sound was recorded. Furthermore,
+      this document showed the editing process used on each
+      individual sound. For example, on Cue 5e, steps such as,
+      reverb was added and the pitch of the original sound was
+      lowered. This step was important because it showed our
+      ability to record and edit sounds through.
+    </p>
+
+        <img src="SpottingLog1Img/SL1.png" alt="Spotting log">
+
+
+
+</div>
+</div>
+</div>
+
+
+<div class="Composing">
+  <div class="box">
+  <div class="Composing_Box">
+    <h3>4. Composing</h3>
+    <p>
+      One of the most challenging part of this project was
+      creating two beats for the video. Since, I did not have any
+      experience with music production this was a learning
+      process for myself. I created these beats in Garage Band.
+      At first, I tried to add a multitude of instruments such as
+      guitar and electric bass but soon found out with a lack of
+      knowledge in music theory and cord progression creating
+      a cohesive beat was going to be challenging. However,
+      after experimenting with different percussion
+      instruments, I was able to create two cohesive beat that
+      will serve as a base line for our sound design. To clarify,
+      these were beats created digitally through a program
+      therefore, this will only aid us in our sound design
+      question and not server as our final music track.
+    </p>
+    <img src="Composing.png" alt="Composing">
+
+</div>
+</div>
+</div>
+
+
+<div class="SoundDesign">
+  <div class="box">
+  <div class="SoundDesign_Box">
+    <h3>5. Sound Design</h3>
+    <p>
+      After brainstorming how to turn each percussion sound
+      into sounds that can be found in the restaurant we settled
+      on these sounds. For example, we turned the kick drum
+      into a slam on the table, the cymbals into chopsticks on
+      plates. We made sure every component such as hand
+      slamming the table and chopsticks hitting the plate were
+      all shown in the film and synced up with the film. Lastly,
+      we recorded these sounds and synced them with the beat.
+      Here I was task with mixing and syncing one part of the
+      beat. First, by importing all the sounds recorded into
+      Audacity and then removing background static in each
+      file. Second, start cutting and changing the playback
+      speed for each sound so they match the tempo of the
+      initial beat showed in figure 3. Then move each audio file
+      to their corresponding location therefore, creating an
+      actual beat. Lastly, add reverb and general EQ to create a
+      bassier and wet sound.
+    </p>
+    <img src="SoundDesign.png" alt="Sound Design">
+
+</div>
+</div>
+</div>
+
+
+<div class="Shooting">
+  <div class="box">
+  <div class="Shooting_Box">
+    <h3>6. Shooting the Video</h3>
+    <p>
+      On the day of the shoot, we arrived at the location and
+      set up all the camera, lighting and sound equipment.
+      W hile following the storyboard, the actors took turns
+      acting while I directed and filmed
+    </p>
+    <img src="Bread.png" alt="Shooting">
+
+</div>
+</div>
+</div>
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>6. Shooting the Video</h3>
+    <p>
+      This is the final step to creating the film. After choosing
+      all the takes we want to use for our film I imported the
+      film into Adobe Premiere I started stitching the film
+      together once again following the story board. After
+      every clip is in the right place, I started color correcting
+      each clip. This was challenging because we shot next to a
+      window where lots of natural light was shinning through.
+      Since, the filming process took many hours to complete
+      the lighting became inconsistent between each shot which
+      breaks the illusion of time established in the film.
+      Therefore, I had to color correct each clip to have a
+      similar color profile. After that I moved on to syncing the
+      dialogue with the video by lining up the audio clips with
+      the actor’s lip movements. Lastly, all the sound effect and
+      the beat were added to the video still matching the video
+      with the audio so no sound effect plays to early or to late
+    </p>
+    <img src="Post.png" alt="Post">
+    <button onclick="topFunction()" class="ButtonNav" title="Go to top">Watch the Final Video</button>
+
+
+</div>
+</div>
+</div>
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
