@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Process Analysis 2</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="hambtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Andy G</label>
+		<ul>
+			<li><a href="index.html" class="Navhover"> Home </a></li>
+			<li><a href="About.html" class="Navhover"> About Me </a></li>
+			<li><a href="Dust.html" class="Navhover"> Dust Bunnies </a></li>
+			<li><a href="Bread.html" class="Navhover"> Freshness Guaranteed French Bread </a></li>
+			<li><a href="ContactMe.html" class="Navhover"> Contact Me </a></li>
+		</ul>
+	</nav>
+
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">^ Top</button>
+
+
+
+  <div class="Post">
+  	<div class="box">
+  	<div class="Post_Box">
+  		<h3>1. Dust Bunnies Animation</h3>
+  		<p>
+        As a team of five we were tasked to create an 3D animated film. My role
+        on this project was mainly animating, rigging, and some 3d modeling.
+        Dust Bunnies is an animated short about a lonesome dust bunny named
+        Dustin, who lives in a corner of an apartment. He dreams of being
+        vacuumed by the apartment's vacuum cleaner, Roomba, however, due to a
+        thumbtack being stuck on Dustin’s head, Roomba refuses to vacuum him out
+        of his corner. It is not until later when the apartment owner picks up
+        the thumbtack along with Dustin, freeing him from his corner and tossing
+        him through the air. Escaped from the corner, Dustin lands in Roomba’s
+        direct path and is finally vacuumed, joining his fellow dust bunnies at
+        the nightclub located inside Roomba.
+      </p>
+  </div>
+  </div>
+  </div>
+
+  <div class="Post">
+  	<div class="box">
+  	<div class="Post_Box">
+  		<h3>2. StoryBoard</h3>
+  		<p>
+        After brainstorming and narrowing down our ideas we decided to
+        storyboard out our film. This is a series of sketches showing different
+        shots and narrative beats of the film. This step helped us divide works
+        among each other. For example, Andy will animate scenes 1-13 and so on.
+        Here I found that my lack of drawing skills did not end up effect my
+        team because we all ended up animating our own parts. Lastly, we put
+        together a video with narrations of the script and each scene of the
+        storyboard being shown.
+      </p>
+
+      <video width="700" controls>
+          <source src="Videos/DustStory.mp4" type="video/mp4">
+      </video>
+  </div>
+  </div>
+  </div>
+
+
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>3. High Fidelity Concept Art</h3>
+    <p>
+     The next step of production was to create high fidelity concept art of the
+     character and the environment. Since, I was not the artist of the group I did
+     not patriciate in this step.
+    </p>
+</div>
+</div>
+</div>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="images/Character1.png" style="width:100%">
+  <div class="text">Character Sketch 1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="images/Character2.png" style="width:100%">
+  <div class="text">Character Sketch 2</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="images/Character3.png" style="width:100%">
+  <div class="text">Character Sketch 3</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="images/Env1.png" style="width:100%">
+  <div class="text">Environment Sketch 1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="images/Env2.png" style="width:100%">
+  <div class="text">Environment Sketch 2</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="images/Env3.png" style="width:100%">
+  <div class="text">Environment Sketch 3</div>
+</div>
+
+
+
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+<span class="dot" onclick="currentSlide(6)"></span>
+
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>4. Project Implementation Process</h3>
+    <p>
+      After brainstorming and writing our script and storyboard, our team listed
+      out all assets that were required to be modeled and textured, assigning
+      each member with at least one asset to create. After all the modeling and
+      texturing were completed, our team then divided our storyboard into a list
+      of cinematic shots and assigned each member with different shots to
+      animate and render individually. I was tasked with the majority of the
+      animation starting for 0:16 to 1:22 of the film. Furthermore, I was also
+      tasked figuring out the fur texture of the dust.
+
+    </p>
+    <img src="images\Process.png" alt="Collage of images" class="Collage">
+
+</div>
+</div>
+</div>
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>5. Texturing</h3>
+    <p>
+      I was tasked with figuring out how to texture the fury that would be on
+      the dust bunnies. Which lead to the biggest issue we encountered during
+      this production with xGen, the geometry instancer tool, as fur files were
+      not properly transferring to different scenes on different computers. As
+      we were assigned with different scenes to animate, each member needed to
+      import required models into their working folders. However, when we
+      attempted to import Dustin and other dust bunnies into our scene folders,
+      we found that our xGen fur files would not properly transfer through. As a
+      result, the fur texture did not load into different scenes.
+    </p> <br>
+
+    <p>
+      To ensure that our xGen files properly transferred through to different
+      scenes, we made sure to import our bunnies into our Maya files. If
+      importing the file was not successful, we would then go into our xGen file
+      path and manually rewrite the paths to ensure that Maya could locate the
+      xGen files from the proper folder.
+    </p> <br>
+
+    <p>
+      Another issue that arose with xGen was that the fur would not connect to
+      our model’s mesh when when animating Dustin. The exact reason behind why
+      the fur would not connect with the mesh is still unclear as not all team
+      members experienced this issue. However, for times when we did encounter
+      this issue, we would either restart Maya or re-import the textured model
+      back into our scenes. If that was not successful, then to ensure that the
+      fur would follow our model’s mesh, we copied the animation keyframes of
+      the skeleton to the fur.
+    </p> <br>
+
+    <video width="700" controls>
+      <source src="Videos/NoFur.mp4" type="video/mp4">
+    </video>
+
+</div>
+</div>
+</div>
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>6. Animating</h3>
+    <p>
+      Since I was tasked with a large portion of the animation, I really tried
+      to follow the 12 principle of animation. One of the principles I really
+      followed and tried to portrait in our film was squash and stretch. This is
+      meant to give a sense of weight and flexibility to the object. This was
+      especially important for this project since, there were no dialogue for
+      the character, therefore, it was very important for us to convey emotions
+      through animation. Another way I tired to bring life into our characters
+      is through the principle, slow in and slow out. This was to hopefully show
+      realistic movement between objects. Since, things in real life take time
+      to accelerate and slow down. A lot of this was done in the Maya graph
+      editor which provides curves to show the speed of animation. Using this
+      editor, I was able to follow the 12 principle of animation.
+    </p>
+    <img src="images\curves.png" alt="editing" class="editing" >
+
+</div>
+</div>
+</div>
+
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>7. Putting it All Together</h3>
+    <p>
+      Once each team member has finished animating their own section, all the scenes
+      were rendered and put together inside of Adobe Premiere. Where sound effects and
+      background music are added. Here is our finished product.
+    </p>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="Post">
+  <div class="box">
+  <div class="Post_Box">
+    <h3>8. Reflection</h3>
+    <p>
+      This project helped me understand the power of new media tools and how it
+      can be combined with traditional direction to create something that is
+      impossible to shoot with a normal camera. The array of camera angles and
+      movements provided by animation tools such as Maya is endless. However, by
+      combining traditional cinematography techniques such as meaning behind
+      each shot I learned to create a meaningful animation.
+    </p>
+		<video controls>
+				<source src="Videos/Dust.mp4" type="video/mp4">
+		</video>
+		<a href="index.html"><button class="ButtonNav" title="Go Home">Check out my other projects</button></a>
+
+
+</div>
+</div>
+</div>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>

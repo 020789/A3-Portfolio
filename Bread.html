@@ -2,27 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Process Analysis 1</title>
+	<title>Process Analysis 2</title>
 	<link rel="stylesheet" href="styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="hambtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Andy G</label>
+		<ul>
+			<li><a href="index.html" class="Navhover"> Home </a></li>
+			<li><a href="About.html" class="Navhover"> About Me </a></li>
+			<li><a href="Dust.html" class="Navhover"> Dust Bunnies </a></li>
+			<li><a href="Bread.html" class="Navhover"> Freshness Guaranteed French Bread </a></li>
+			<li><a href="ContactMe.html" class="Navhover"> Contact Me </a></li>
+		</ul>
+	</nav>
+
   <button onclick="topFunction()" id="myBtn" title="Go to top">^ Top</button>
 
 
-  <div class="TopBanner">
 
-  		<video width="1000" controls class="FreshBread">
-          <source src="Fresh.mp4" type="video/mp4">
-      </video>
-  </div>
 
-  <a href="index.html"><button type="button" name="Go Home" class="ButtonNav">Go Home</button></a>
 
-  <div class="About">
+
+	<div class="Post">
   	<div class="box">
-  	<div class="About_Box">
+  	<div class="Post_Box">
   		<h3>1. Film Drive by Sound</h3>
   		<p>
         As a film crew of two with two actors we were task to
@@ -45,9 +57,9 @@
   </div>
   </div>
 
-  <div class="About">
-  	<div class="box">
-  	<div class="About_Box">
+	<div class="Post">
+		<div class="box">
+		<div class="Post_Box">
   		<h3>2. StoryBoard</h3>
   		<p>
         I first started to sketch out a set of storyboards showing
@@ -169,10 +181,9 @@ function showSlides(n) {
 }
 </script>
 
-
-<div class="About">
-  <div class="box">
-  <div class="About_Box">
+<div class="Post">
+	<div class="box">
+	<div class="Post_Box">
     <h3>3. Spotting Log</h3>
     <p>
       Since the natural of the project was using sound to drive
@@ -186,7 +197,7 @@ function showSlides(n) {
       ability to record and edit sounds through.
     </p>
 
-        <img src="SpottingLog1Img/SL1.png" alt="Spotting log">
+        <img src="SpottingLog1Img\SL1.png" alt="Spotting log" class="spottingLogImg">
 
 
 
@@ -195,9 +206,9 @@ function showSlides(n) {
 </div>
 
 
-<div class="Composing">
-  <div class="box">
-  <div class="Composing_Box">
+<div class="Post">
+	<div class="box">
+	<div class="Post_Box">
     <h3>4. Composing</h3>
     <p>
       One of the most challenging part of this project was
@@ -215,16 +226,16 @@ function showSlides(n) {
       therefore, this will only aid us in our sound design
       question and not server as our final music track.
     </p>
-    <img src="images\Composing.png" alt="Composing">
+    <img src="images\Composing.png" alt="Composing" class="composingImg">
 
 </div>
 </div>
 </div>
 
 
-<div class="SoundDesign">
-  <div class="box">
-  <div class="SoundDesign_Box">
+<div class="Post">
+	<div class="box">
+	<div class="Post_Box">
     <h3>5. Sound Design</h3>
     <p>
       After brainstorming how to turn each percussion sound
@@ -245,24 +256,7 @@ function showSlides(n) {
       actual beat. Lastly, add reverb and general EQ to create a
       bassier and wet sound.
     </p>
-    <img src="images\SoundDesign.png" alt="Sound Design">
-
-</div>
-</div>
-</div>
-
-
-<div class="Shooting">
-  <div class="box">
-  <div class="Shooting_Box">
-    <h3>6. Shooting the Video</h3>
-    <p>
-      On the day of the shoot, we arrived at the location and
-      set up all the camera, lighting and sound equipment.
-      W hile following the storyboard, the actors took turns
-      acting while I directed and filmed
-    </p>
-    <img src="images\Bread.png" alt="Shooting">
+    <img src="images\SoundDesign.png" alt="Sound Design" class="soundImg">
 
 </div>
 </div>
@@ -270,29 +264,37 @@ function showSlides(n) {
 
 
 <div class="Post">
-  <div class="box">
-  <div class="Post_Box">
+	<div class="box">
+	<div class="Post_Box">
     <h3>6. Shooting the Video</h3>
     <p>
-      This is the final step to creating the film. After choosing
-      all the takes we want to use for our film I imported the
-      film into Adobe Premiere I started stitching the film
-      together once again following the story board. After
-      every clip is in the right place, I started color correcting
-      each clip. This was challenging because we shot next to a
-      window where lots of natural light was shinning through.
-      Since, the filming process took many hours to complete
-      the lighting became inconsistent between each shot which
-      breaks the illusion of time established in the film.
-      Therefore, I had to color correct each clip to have a
-      similar color profile. After that I moved on to syncing the
-      dialogue with the video by lining up the audio clips with
-      the actor’s lip movements. Lastly, all the sound effect and
-      the beat were added to the video still matching the video
-      with the audio so no sound effect plays to early or to late
+      On the day of the shoot, we arrived at the location and
+      set up all the camera, lighting and sound equipment.
+      W hile following the storyboard, the actors took turns
+      acting while I directed and filmed
     </p>
-    <img src="images\Post.png" alt="Post">
-    <button onclick="topFunction()" class="ButtonNav" title="Go to top">Watch the Final Video</button>
+    <img src="images\Bread.png" alt="Shooting" class="shootingImg">
+
+</div>
+</div>
+</div>
+
+<div class="Post">
+	<div class="box">
+	<div class="Post_Box">
+    <h3>8. Reflection</h3>
+    <p>
+      This project really challenged me to direct a film starting from the sound
+      design rather than through cinematograph. By composing a sound track
+      before imaging a video took a lot of creativity and brainstorming.
+      Furthermore, this project really showed me that the sound design is
+      extremely important to a film and can change the whole perception and
+      theme of a film.
+    </p>
+		<video controls>
+				<source src="Videos/Fresh.mp4" type="video/mp4">
+		</video>
+    <a href="index.html"><button class="ButtonNav" title="Go Home">Check out my other projects</button></a>
 
 
 </div>
