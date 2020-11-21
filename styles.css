@@ -4,6 +4,8 @@
 @font-face {
   src: url(Fonts/Randrake.ttf);
   font-family: Randrake;
+  src: url(Fonts/Lora-Regular.ttf);
+  font-family: lora;
 }
 *{
   margin: 0;
@@ -12,7 +14,7 @@
 }
 
 body{
-  background: #1e1f23;
+  background: #f5f5f5;
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -24,14 +26,14 @@ body{
 nav {
   top: 0;
   position: fixed;
-  background: #0082e6;
+  background: #ffffff;
   height: 80px;
   width: 100%;
   z-index: 100;
 }
 
 label.logo {
-  color: white;
+  color: black;
   font-family: Randrake;
   font-size: 45px;
   line-height: 80px;
@@ -43,34 +45,59 @@ video {
   margin-top: 1em;
 }
 nav ul {
+  color: black;
   float: right;
   margin-right: 10em;
 }
 
 nav ul li {
+  color: black;
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
 
 nav ul li .Navhover{
-  color: white;
+  color: black;
   font-size: 17px;
   padding: 7px 13px;
-  border-radius: 3px;
+
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.Navhover:hover, .Navhover:focus {
-  background: #1b9bff;
-  transition: .5s;
+.Citation ul {
+  margin-left: 3em;
+  margin-top: 5em;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+
+.Navhover::after {
+  content: '';
+  margin-top: -1.5em;
+  margin-left: 0.5em;
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+.Navhover:hover::after  {
+  width: 99%;
+}
+
+.logoclick:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .contact-form {
   width: 85%;
   max-width: 600px;
-  background: #193153;
+  background: #101213;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,9 +112,26 @@ nav ul li .Navhover{
 
 .contact-form h1 {
   margin-right: 0;
-  color: #CEA434;
+  color: white;
 }
 
+.contact-form .buttonStyle {
+  color: white;
+}
+.contact-form .buttonStyle::after {
+  content: '';
+  margin-top: 0.3em;
+  margin-left: 0em;
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: white;
+  transition: 300ms;
+}
+
+.contact-form .buttonStyle:hover::after  {
+  width: 99%;
+}
 .FormField {
   border: 1px solid gray;
   margin: 8px 0;
@@ -115,7 +159,7 @@ nav ul li .Navhover{
 
 .hambtn {
   font-size: 30px;
-  color: white;
+  color: black;
   float: right;
   line-height: 80px;
   margin-right: 5em;
@@ -165,67 +209,51 @@ nav ul li .Navhover{
 }
 
 .About {
-  margin-top: 10%;
+  margin-top: 10em;
+  margin-bottom: 2em;
+}
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.About .About_Box {
-  background: #193153;
-  margin: 5px;
-  margin-bottom: 50px;
-  width: 900px;
-  padding: 100px;
-  line-height: 20px;
-  color: #ffffff;
-  position: relative;
+.container-row .halfimg {
+  margin-top: 5em;
+  flex: 1;
 }
 
-.About .About_Box h3 {
-  color: #CEA434;
-  font-size: 40px;
-  margin-top: 50px;
+.container-row .Dance {
+  margin-top: 5em;
+  flex: 1;
+  background-color: white;
+}
+
+.Dance h1 {
+  margin-top: 1em;
+  font-size: 120px;
+  margin-left: 1em;
   margin-bottom: 1em;
-  line-height: 50px;
+  color: black;
+  font-family: Randrake;
+}
+
+.Dance h2 {
+  margin-top: 1em;
+  font-size: 30px;
+  margin-left: 1em;
+  margin-bottom: 5em;
+  color: black;
+  margin-left: 4em;
+  margin-right: 10em;
+  line-height: 40px;
 }
 
 
-
-.box .About_Box img{
-  width: 800px;
-  height: 1200px;
-  margin-bottom: 10em;
-  margin-top: 5em;
-  margin-left: -3em;
+.Gallery {
+  margin-top: 10em;
+  margin-bottom: 3em;
 }
 
-.box .About_Box video {
-  margin-top: 5em;
-}
-
-
-
-
-.ButtonNav {
-  margin-top: 2.5em;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  display: inline-block;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 12px;
-  font-size: 16px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  transition-property: color, border;
-  transition-duration: 0.5s;
-}
-
-.ButtonNav:hover ,ButtonNav:focus {
-  color: #CEA434;
-  border: 5px solid #CEA434;
-}
 
 .wrapper{
   margin-top: 10%;
@@ -304,6 +332,66 @@ nav ul li .Navhover{
   transform: scale(1.1);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+
+}
+
+.image.fit:hover .overlay {
+  opacity: 0.7;
+  transition-duration: 0.5s;
+}
+.role h1 {
+  color: white;
+  font-size: 35px;
+  font-family: lora;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.role p{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.role a {
+  text-decoration: none;
+  font-family: lora;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.role a:hover {
+  color: #CEA434;
+}
+
 
 .zoom {
   overflow: hidden;
@@ -317,31 +405,16 @@ nav ul li .Navhover{
 
 
 .References {
-  margin-top: 10%;
-}
-.References .References_Box {
-  margin-bottom: 10em;
-  line-height: 20px;
-  color: #ffffff;
+  margin-top: 5%;
+  height: 150px;
+  background-color: white;
   position: relative;
-
+  bottom: 0;
+  width: 100%;
 }
-
-.References .References_Box h3 {
-  line-height: 60px;
-  color: #CEA434;
-  font-size: 40px;
-  margin-top: 50px;
-  margin-bottom: 1em;
+.References .content .buttonStyle {
+  margin-top: 2em;
 }
-
-.References .ButtonNav {
-  margin-right: 1em;
-}
-
-
-
-
 
 /* Slideshow container */
 .slideshow-container {
@@ -451,17 +524,18 @@ nav ul li .Navhover{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   display: inline-block;
-  background-color: transparent;
+  background-color: black;
   color: #ffffff;
-  border: 2px solid #ffffff;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 25px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   transition-property: color, border;
   transition-duration: 0.5s;
+  box-shadow: 5px 10px 0 black;
+  border: 2px solid #ffffff;
 }
 
 #myBtn:hover {
@@ -501,6 +575,7 @@ nav ul li .Navhover{
 
 
 .Post {
+  display: flex;
   margin-top: 10%;
 }
 
@@ -591,6 +666,21 @@ nav ul li .Navhover{
   border-radius: 10px;
 }
 
+.column3 {
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 10px;
+  margin-bottom: 2em;
+}
+
+.column3 img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 10px;
+}
+
 .header {
   text-align: center;
   color: #CEA434;
@@ -602,6 +692,96 @@ nav ul li .Navhover{
   padding-bottom: 1em;
 }
 
+.content p {
+  margin-left: 1em;
+  font-family: lora;
+  text-align: left;
+  font-size: 50px;
+}
+
+.content a {
+  margin-left: 3.5em;
+  margin-top: 0.5em;
+}
+.buttonStyle {
+  font-family: lora;
+  border: none;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.buttonStyle::after {
+  content: '';
+  margin-top: 0.1em;
+  margin-left: 0em;
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+.buttonStyle:hover::after {
+  width: 99%;
+}
+
+.floatup {
+  position: relative;
+  animation: moving 2s ease-in-out, trans 3s ease-in-out;
+}
+
+.floatup1 {
+  position: relative;
+  animation: trans 3.5s ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.imgfloatup1 {
+  position: relative;
+  animation: moveimg 2s ease-in-out, transimg 2.5s ease-in-out;
+  animation-delay: 0.1s;
+}
+
+.imgfloatup2 {
+  position: relative;
+  animation: moveimg 2s ease-in-out, transimg 2.5s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.imgfloatup3 {
+  position: relative;
+  animation: moveimg 2s ease-in-out, transimg 2.5s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes moving {
+  from { top: 200px; }
+  to { top: 0px; }
+}
+
+@keyframes trans {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+@keyframes moveimg {
+  from {margin-top: 10em;}
+  to {margin-top: 0em;}
+}
+
+@keyframes transimg {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+
+
+
+
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1000px) {
   .column {
@@ -609,7 +789,52 @@ nav ul li .Navhover{
     flex: 50%;
     max-width: 50%;
   }
+
+  .column3 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    padding-bottom: 5px;
+  }
+
+
 }
+
+@media screen and (max-width: 1600px) {
+
+  .role h1 {
+    font-size: 20px;
+  }
+
+  .role p {
+    font-size: 12px;
+  }
+  .container-row {
+    flex-direction: column;
+  }
+  .container-row .Dance{
+    width: 100%;
+    height: auto;
+  }
+
+  .container-row .halfimg{
+    width: 100%;
+    height: auto;
+  }
+
+  .Dance h1 {
+    font-size: 100px;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+  }
+
+  .Dance h2 {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+
+  }
+}
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -618,9 +843,29 @@ nav ul li .Navhover{
     flex: 100%;
     max-width: 100%;
   }
+
+  .content p{
+    font-size: 30px;
+  }
+
+  .content a {
+    margin-left: 2em;
+  }
+
+  .content .buttonStyle {
+    font-size: 15px;
+    margin-top: 1em;
+  }
+
+  .Dance h2 {
+    font-size: 20px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    line-height: 30px;
+  }
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1570px) {
   label.logo {
     font-size: 30px;
     padding-left: 50px;
@@ -630,7 +875,7 @@ nav ul li .Navhover{
   }
 }
 
-@media (max-width: 1326px) {
+@media (max-width: 1479px) {
   .hambtn {
     display: block;
     margin-right: 1em;
@@ -640,7 +885,8 @@ nav ul li .Navhover{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #2c3e50;
+    opacity: 0.95;
+    background: black;
     top: 80px;
     left: -100%;
     text-align: center;
@@ -650,25 +896,24 @@ nav ul li .Navhover{
   nav ul li {
     display: block;
     margin: 50px 0;
-    line-height: 30px;
+    line-height: 20px;
+    z-index: 301;
   }
 
   nav ul li .Navhover{
-    font-size: 20px;
+    font-size: 45px;
+    color: white;
+    line-height: 1.5em;
   }
 
-  .Navhover:focus, .Navhover:hover {
-    background:none;
-    color: #0082e6;
-  }
+
+.Navhover:hover {
+  color: #CEA434;
+  transition: 0.5s;
+}
+
 
   #check:checked ~ ul {
     left: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  label.logo {
-    visibility: hidden;
   }
 }
